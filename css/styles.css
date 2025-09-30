@@ -1,0 +1,341 @@
+/* ====================================
+   CONFIGURACIÓN FLUIDA PARA PANTALLAS GRANDES
+   ==================================== */
+html {
+    font-size: clamp(16px, 1rem + 0.2vw, 20px);
+}
+
+/* ============================
+   PALETA DE COLORES
+   ============================ */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; 
+    background-color: #F2F3F5;
+    color: #00447A; 
+}
+
+.header {
+    background-image: url('https://i.imgur.com/o5ApeGm.png');
+    background-size: cover; 
+    background-position: center;
+    height: 20rem; 
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1; 
+    background-color: #00447A; 
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); 
+}
+
+.header h1 {
+    color: #FFFFFF; 
+    margin: 0;
+    font-size: 2.2em;
+    z-index: 4;
+}
+
+.header p {
+    color: #FFFFFF; 
+    margin: 0;
+    font-size: 1.2em;
+    z-index: 4;
+}
+
+.intro-container {
+    margin-top: 2rem; 
+    position: relative;
+    z-index: 2;
+}
+
+.intro {
+    text-align: center; 
+    padding: 2rem; 
+    margin-bottom: 1.5rem;
+    max-width: 50rem; 
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro:hover {
+    transform: scale(1.01); 
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1); 
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.intro .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 1rem; 
+}
+
+.intro .title-icon {
+    background-color: #83B81A;
+    color: #FFFFFF;
+    font-size: 2em; 
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    border: 0.25rem solid #73BA00;
+}
+
+.intro h2 {
+    color: #83B81A;
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.intro p {
+    text-align: center; 
+    line-height: 1.5; 
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 1.5rem; 
+    padding: 1.5rem; 
+    margin: 0 auto; 
+    max-width: 75rem; 
+}
+
+.card {
+    background-color: #FFFFFF;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.4rem 0.6rem rgba(0,0,0,0.15);
+    padding: 1.5rem; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+}
+
+.card-icon {
+    background-color: #F2F3F5;
+    color: #00447A;
+    font-size: 2.5em;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.card h3 {
+    color: #00447A;
+    font-size: 1.3em; 
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.card p {
+    font-size: 0.95em; 
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    text-align: left;
+    color: inherit; 
+}
+
+.steps {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+}
+
+.steps li {
+    background-color: #F2F3F5;
+    padding: 0.75rem; 
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem; 
+    color: inherit;
+}
+
+/* ================= FOOTER / CONTACTO ================= */
+
+.color-band {
+    width: 100%;
+    height: 0.625rem;
+}
+
+.green-band {
+    background-color: #83B81A; 
+}
+
+.contact-section {
+    background-color: #FFFFFF; 
+    padding: 2.5rem 1.5rem;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 75rem; 
+    margin: 0 auto;
+}
+
+.contact-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    min-width: 9rem;
+}
+
+.contact-logo .logo-img {
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background-color: transparent;
+    color: initial;
+    font-size: initial;
+    display: block; 
+    margin-right: 0; 
+    padding-right: 1rem;
+    border-right: 0.2rem solid #83B81A;
+}
+
+.contact-logo .logo-img img {
+    height: 4.5rem; 
+    width: auto;
+    display: block;
+}
+
+.contact-info {
+    flex-grow: 1; 
+    min-width: 18rem;
+    padding-left: 2.5rem;
+}
+
+.contact-info p {
+    margin: 0.3rem 0;
+    font-size: 0.95em;
+}
+
+.contact-info strong {
+    color: #83B81A; 
+    font-weight: 600;
+}
+
+.contact-social {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-social a {
+    color: #00447A;
+    font-size: 1.5em;
+    margin-right: 1rem;
+    transition: color 0.2s ease;
+}
+
+.contact-social a:hover {
+    color: #83B81A; 
+}
+
+.contact-divider {
+    border-bottom: 1px solid #00447A;
+    margin-bottom: 1.25rem;
+}
+
+.footer-bottom {
+    background-color: #00447A;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem; 
+    font-size: 0.8em;
+    margin-top: 0; 
+}
+
+/* Media Queries para Responsividad del Contacto */
+@media (max-width: 50rem) {
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .contact-logo {
+        border-bottom: 0.2rem solid #83B81A; 
+        padding-bottom: 1.25rem;
+        margin-bottom: 1.8rem;
+        justify-content: center; 
+        display: block; 
+        text-align: center;
+    }
+    .contact-logo .logo-img {
+        border-right: none;
+        padding-right: 0;
+        margin: 0 auto; 
+    }
+    .contact-info {
+        padding-left: 0;
+        text-align: center;
+    }
+    .contact-social {
+        justify-content: center;
+        margin-bottom: 1.25rem;
+    }
+}
+
+/* ================= BOTÓN VOLVER ARRIBA ================= */
+
+.back-to-top {
+    /* Fija la posición en la esquina inferior derecha */
+    position: fixed; 
+    bottom: 1.5rem; 
+    right: 1.5rem;
+    
+    /* Apariencia */
+    background-color: #00447A; 
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.5rem; 
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    
+    /* Dimensiones */
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Control de visibilidad/animación */
+    opacity: 0; /* Oculto por defecto */
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top:hover {
+    background-color: #73BA00;
+}
+
+/* Esta clase se añade/quita con JavaScript para mostrar el botón */
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
