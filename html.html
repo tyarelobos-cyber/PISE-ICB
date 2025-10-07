@@ -10,11 +10,16 @@
 </head>
 
 <body>
+    <!-- ================= HEADER ================= -->
     <header class="header">
         <h1>Plan Integral de Seguridad Escolar (PISE)</h1>
         <p>Información y protocolos de emergencia dentro del colegio</p>
+        <div class="curve"></div>
     </header>
 
+
+
+    <!-- ================= INTRO - ¿Qué es el PISE? ================= -->
     <section class="intro-container">
         <div class="intro">
             <div class="title-container">
@@ -34,91 +39,211 @@
         </div>
     </section>
 
+    <!-- ================= GRID DE EMERGENCIAS REDISEÑADO (6 secciones) ================= -->
+    <!-- El efecto de oscurecimiento se gestiona en el contenedor .grid y .card:hover -->
     <section class="grid">
+        <!-- Incendios -->
         <div class="card">
-            <div class="card-icon">🔥</div>
-            <h3>Incendios</h3>
+            <!-- Título al estilo del Intro -->
+            <div class="card-header">
+                <i class="fas fa-fire card-icon"></i>
+                <h3>Incendios</h3>
+            </div>
             <p><strong>Identificación:</strong> Situaciones donde el fuego representa un riesgo directo.</p>
             <ul class="steps">
-                <li>Profesor/a jefe o inspector activa la alarma y lidera la evacuación.</li>
-                <li>Estudiantes salen en fila, dejando mochilas y objetos.</li>
-                <li>Encargados de curso verifican que nadie se quede en salas o baños.</li>
-                <li>Profesores llevan lista para control de asistencia en zona segura.</li>
-                <li>Personal de servicios corta electricidad y gas.</li>
-                <li>Bomberos se contactan desde secretaría o inspectoría general.</li>
+                <li>
+                    <div class="step-number">1.</div>
+                    <div class="step-text">Profesor/a jefe o inspector activa la alarma y lidera la **evacuación inmediata** de la sala.</div>
+                </li>
+                <li>
+                    <div class="step-number">2.</div>
+                    <div class="step-text">Estudiantes salen en fila, **sin mochilas** ni objetos personales, dirigiéndose a la zona de seguridad.</div>
+                </li>
+                <li>
+                    <div class="step-number">3.</div>
+                    <div class="step-text">Encargados de curso verifican que nadie se quede en salas, baños o pasillos.</div>
+                </li>
+                <li>
+                    <div class="step-number">4.</div>
+                    <div class="step-text">Profesores llevan lista de curso para realizar **control de asistencia** en la zona segura.</div>
+                </li>
+                <li>
+                    <div class="step-number">5.</div>
+                    <div class="step-text">Personal de servicios corta el suministro de electricidad y gas de todo el recinto.</div>
+                </li>
+                <li>
+                    <div class="step-number">6.</div>
+                    <div class="step-text">Se contacta a Bomberos (132) desde secretaría o inspectoría general.</div>
+                </li>
             </ul>
         </div>
 
+        <!-- Sismos -->
         <div class="card">
-            <div class="card-icon">🤕</div>
-            <h3>Accidentes</h3>
-            <p><strong>Identificación:</strong> Situaciones de lesiones o daños físicos dentro del colegio.</p>
-            <ul class="steps">
-                <li>Profesor/a o inspector aplica primeros auxilios básicos (Personal capacitado).</li>
-                <li>Se traslada al estudiante a enfermería.</li>
-                <li>Se informa a apoderado inmediatamente.</li>
-                <li>Si es grave → se activa el seguro escolar y se llama a ambulancia.</li>
-                <li>Equipo de convivencia brinda contención emocional a testigos.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <div class="card-icon">🌍</div>
-            <h3>Sismos</h3>
+            <div class="card-header">
+                <i class="fas fa-mountain card-icon"></i>
+                <h3>Sismos</h3>
+            </div>
             <p><strong>Identificación:</strong> Movimientos telúricos que pueden poner en riesgo a la comunidad.</p>
             <ul class="steps">
-                <li>Al sonar o sentirse el sismo: Los estudiantes se deben protegen bajo mesas, alejados de ventanas.</li>
-                <li>Una vez seguro, se inicia evacuación ordenada a zona segura.</li>
-                <li>Los profesores mantienen la calma y disciplina en su grupo.</li>
-                <li>Inspectoría controla las rutas de evacuación.</li>
-                <li>Dirección comunica situación a apoderados y autoridades si es necesario.</li>
+                <li>
+                    <div class="step-number">1.</div>
+                    <div class="step-text">Durante el movimiento: Los estudiantes se protegen **debajo de mesas o escritorios** (cubrirse y sujetarse), alejados de ventanas.</div>
+                </li>
+                <li>
+                    <div class="step-number">2.</div>
+                    <div class="step-text">Una vez finalizado el sismo: Se inicia **evacuación ordenada** a la zona de seguridad designada.</div>
+                </li>
+                <li>
+                    <div class="step-number">3.</div>
+                    <div class="step-text">Los profesores mantienen la calma y disciplina en su grupo, sin correr ni gritar.</div>
+                </li>
+                <li>
+                    <div class="step-number">4.</div>
+                    <div class="step-text">Inspectoría y equipo PISE controlan y **despejan las rutas de evacuación**.</div>
+                </li>
+                <li>
+                    <div class="step-number">5.</div>
+                    <div class="step-text">Dirección y equipo PISE evalúan daños y comunican la situación a apoderados y autoridades si es necesario.</div>
+                </li>
             </ul>
         </div>
 
+        <!-- Accidentes Graves -->
         <div class="card">
-            <div class="card-icon">⚡</div>
-            <h3>Fallas eléctricas</h3>
-            <p><strong>Identificación:</strong> Cortes de energía o desperfectos eléctricos dentro del establecimiento.</p>
+            <div class="card-header">
+                <i class="fas fa-medkit card-icon"></i>
+                <h3>Accidentes Graves</h3>
+            </div>
+            <p><strong>Identificación:</strong> Lesiones serias o situaciones de riesgo vital.</p>
             <ul class="steps">
-                <li>Encargado de servicios corta energía en tablero general.</li>
-                <li>Profesores suspenden uso de proyectores, computadores, laboratorios.</li>
-                <li>Los estudiantes permanecen en sala hasta que se indique lo contrario.</li>
-                <li>Si la falla genera riesgo (chispas, humo) → evacuar al patio.</li>
+                <li>
+                    <div class="step-number">1.</div>
+                    <div class="step-text">Profesor/a o inspector **evalúa la situación** y asegura la escena (no mover al lesionado a menos que sea peligro inminente).</div>
+                </li>
+                <li>
+                    <div class="step-number">2.</div>
+                    <div class="step-text">Se notifica a enfermería o a un adulto capacitado en primeros auxilios.</div>
+                </li>
+                <li>
+                    <div class="step-number">3.</div>
+                    <div class="step-text">Si es necesario: Se activa el **seguro escolar** y se llama a ambulancia (SAMU 131) indicando ubicación exacta.</div>
+                </li>
+                <li>
+                    <div class="step-number">4.</div>
+                    <div class="step-text">Se informa al apoderado **inmediatamente** sobre el traslado o la situación.</div>
+                </li>
+                <li>
+                    <div class="step-number">5.</div>
+                    <div class="step-text">Equipo de convivencia brinda **contención emocional** a estudiantes que presenciaron el evento.</div>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Fugas de gas -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-gas-pump card-icon"></i>
+                <h3>Fugas de Gas</h3>
+            </div>
+            <p><strong>Identificación:</strong> Olor a gas o escape detectado en cualquier área.</p>
+            <ul class="steps">
+                <li>
+                    <div class="step-number">1.</div>
+                    <div class="step-text">Profesor/a ordena **evacuación inmediata** de la sala o área afectada, evitando encender o apagar interruptores.</div>
+                </li>
+                <li>
+                    <div class="step-number">2.</div>
+                    <div class="step-text">Encargado de servicios corta el **suministro central** de gas.</div>
+                </li>
+                <li>
+                    <div class="step-number">3.</div>
+                    <div class="step-text">Se ventila el área abriendo ventanas y puertas.</div>
+                </li>
+                <li>
+                    <div class="step-number">4.</div>
+                    <div class="step-text">Secretaría avisa a la compañía de gas y a Bomberos (132).</div>
+                </li>
+                <li>
+                    <div class="step-number">5.</div>
+                    <div class="step-text">Nadie reingresa hasta que la compañía o bomberos confirmen que es seguro.</div>
+                </li>
             </ul>
         </div>
 
+        <!-- Fallas eléctricas (Recuperado) -->
         <div class="card">
-            <div class="card-icon">💨</div>
-            <h3>Fugas de gas</h3>
-            <p><strong>Identificación:</strong> Escape de gas que pueda afectar la seguridad de estudiantes y personal.</p>
+            <div class="card-header">
+                <i class="fas fa-bolt card-icon"></i>
+                <h3>Fallas Eléctricas</h3>
+            </div>
+            <p><strong>Identificación:</strong> Cortes de energía o desperfectos eléctricos con posible riesgo.</p>
             <ul class="steps">
-                <li>Encargado corta suministro central.</li>
-                <li>Profesores ordenan evacuación rápida y sin uso de interruptores eléctricos.</li>
-                <li>No se permite encender celulares ni fuego en el trayecto.</li>
-                <li>Secretaría da aviso a bomberos y mantiene comunicación con dirección.</li>
+                <li>
+                    <div class="step-number">1.</div>
+                    <div class="step-text">El Encargado de Servicios **corta la energía** en el tablero general y revisa la falla.</div>
+                </li>
+                <li>
+                    <div class="step-number">2.</div>
+                    <div class="step-text">Profesores suspenden el uso de cualquier equipo eléctrico (proyectores, computadores, etc.).</div>
+                </li>
+                <li>
+                    <div class="step-number">3.</div>
+                    <div class="step-text">Si la falla no implica riesgo (solo corte de luz), los estudiantes permanecen en sala.</div>
+                </li>
+                <li>
+                    <div class="step-number">4.</div>
+                    <div class="step-text">Si hay chispas o humo, el profesor ordena **evacuar al patio** más cercano de forma ordenada.</div>
+                </li>
+                <li>
+                    <div class="step-number">5.</div>
+                    <div class="step-text">Se contacta a la compañía eléctrica para la reparación.</div>
+                </li>
             </ul>
         </div>
-
+        
+        <!-- Uso de desfibrilador (DEA) (Recuperado) -->
         <div class="card">
-            <div class="card-icon">❤️</div>
-            <h3>Uso de desfibrilador</h3>
-            <p><strong>Identificación:</strong> Emergencia cardíaca que requiere el uso inmediato de un DEA.</p>
+            <div class="card-header">
+                <i class="fas fa-heartbeat card-icon"></i>
+                <h3>Uso de DEA / RCP</h3>
+            </div>
+            <p><strong>Identificación:</strong> Emergencia cardíaca o paro respiratorio.</p>
             <ul class="steps">
-                <li>El liceo debe tener un DEA en un lugar visible y accesible (ej: inspectoría).</li>
-                <li>Alumnos designados como brigadistas escolares pueden apoyar trayendo el DEA.
-                <li>Personal capacitado (profesores, asistentes, inspectoría) lo utiliza siguiendo la cadena de supervivencia.</li>
-                <li>Mientras llega el DEA, un adulto inicia RCP.</li>
-                <li>Se activa contacto con SAMU (131) inmediatamente.</li>
+                <li>
+                    <div class="step-number">1.</div>
+                    <div class="step-text">Se activa el protocolo de emergencia y se pide a un brigadista que traiga el **Desfibrilador Externo Automático (DEA)**.</div>
+                </li>
+                <li>
+                    <div class="step-number">2.</div>
+                    <div class="step-text">Un adulto capacitado **inicia la RCP** (Reanimación Cardiopulmonar) de inmediato.</div>
+                </li>
+                <li>
+                    <div class="step-number">3.</div>
+                    <div class="step-text">Se utiliza el DEA según las instrucciones del aparato y del personal capacitado.</div>
+                </li>
+                <li>
+                    <div class="step-number">4.</div>
+                    <div class="step-text">Se **llama al SAMU (131)** o al servicio de urgencia y se mantiene la RCP/uso del DEA hasta su llegada.</div>
+                </li>
+                <li>
+                    <div class="step-number">5.</div>
+                    <div class="step-text">Se mantiene el área despejada y se informa a la dirección.</div>
+                </li>
             </ul>
         </div>
     </section>
 
+    <!-- ================= BANDA DE COLOR VERDE SUPERIOR ================= -->
     <div class="color-band green-band"></div>
 
+    <!-- ================= SECCIÓN DE CONTACTO ================= -->
     <section class="contact-section">
         <div class="contact-content">
+            <!-- Columna del Logo (Solo la imagen) -->
             <div class="contact-logo">
                 <div class="logo-img">
+                    <!-- LOGO DE IMAGEN SVG -->
                     <img src="https://insucoabg.cl/wp-content/uploads/2025/05/logo-inst-comercial-comeduc.svg" 
                          alt="Logo Instituto Comercial Bicentenario"
                          onerror="this.onerror=null; this.src='https://placehold.co/70x70/00447A/FFFFFF?text=Logo';"
@@ -126,8 +251,10 @@
                 </div>
             </div>
 
+            <!-- Columna de Redes Sociales y Contacto -->
             <div class="contact-info">
                 
+                <!-- Redes Sociales -->
                 <div class="contact-social">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -137,6 +264,7 @@
 
                 <div class="contact-divider"></div>
 
+                <!-- Información de Contacto -->
                 <p>
                     <strong>Instituto Comercial Bicentenario de Viña del Mar</strong>
                 </p>
@@ -154,6 +282,7 @@
         </div>
     </section>
 
+    <!-- ================= FOOTER FINAL ================= -->
     <div class="footer-bottom">
         <p>Instituto Comercial Bicentenario de Viña del Mar parte de la red de establecimientos de Fundación Educacional Comeduc | 2025</p>
     </div>

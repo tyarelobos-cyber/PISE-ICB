@@ -1,341 +1,376 @@
-/* ====================================
-   CONFIGURACIÓN FLUIDA PARA PANTALLAS GRANDES
-   ==================================== */
-html {
-    font-size: clamp(16px, 1rem + 0.2vw, 20px);
-}
 
-/* ============================
-   PALETA DE COLORES
-   ============================ */
+        /* ====================================
+           CONFIGURACIÓN FLUIDA PARA PANTALLAS GRANDES
+           La fuente base escala entre 16px y 20px, permitiendo que
+           todas las unidades 'rem' se ajusten automáticamente.
+           ==================================== */
+        html {
+            /* Escala el tamaño de fuente base: Mín 16px, Máx 20px, con 0.2vw de fluido */
+            font-size: clamp(16px, 1rem + 0.2vw, 20px);
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0; 
-    background-color: #F2F3F5;
-    color: #00447A; 
-}
+        /* ============================
+           PALETA DE COLORES
+           ============================ */
 
-.header {
-    background-image: url('https://i.imgur.com/o5ApeGm.png');
-    background-size: cover; 
-    background-position: center;
-    height: 20rem; 
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-    z-index: 1; 
-    background-color: #00447A; 
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); 
-}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; 
+            background-color: #F2F3F5;
+            color: #00447A; 
+        }
 
-.header h1 {
-    color: #FFFFFF; 
-    margin: 0;
-    font-size: 2.2em;
-    z-index: 4;
-}
+        /* Estilos generales (Header, Footer) */
+        
+        .header {
+            background-image: url('https://i.imgur.com/o5ApeGm.png');
+            background-size: cover; 
+            background-position: center;
+            height: 20rem; 
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            z-index: 1; 
+            background-color: #00447A; 
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); 
+            width: 100%; /* O el ancho que necesites */
+            aspect-ratio: 16 / 9;
+            object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+        }
 
-.header p {
-    color: #FFFFFF; 
-    margin: 0;
-    font-size: 1.2em;
-    z-index: 4;
-}
 
-.intro-container {
-    margin-top: 2rem; 
-    position: relative;
-    z-index: 2;
-}
 
-.intro {
-    text-align: center; 
-    padding: 2rem; 
-    margin-bottom: 1.5rem;
-    max-width: 50rem; 
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.intro:hover {
-    transform: scale(1.01); 
-    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1); 
-    background-color: #FFFFFF;
-    cursor: pointer;
-}
 
-.intro .title-container {
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    margin-bottom: 1rem; 
-}
 
-.intro .title-icon {
-    background-color: #83B81A;
-    color: #FFFFFF;
-    font-size: 2em; 
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1rem;
-    border: 0.25rem solid #73BA00;
-}
+        .curve {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 5vh;
+        background-color:  #F2F3F5;
+        border-radius: 25% 95% 0% 0%;
+        }
 
-.intro h2 {
-    color: #83B81A;
-    font-size: 1.8em;
-    margin: 0;
-}
+        .header h1 {
+            color: #FFFFFF; 
+            margin: 0;
+            font-size: 2.2em;
+            z-index: 4;
+        }
 
-.intro p {
-    text-align: center; 
-    line-height: 1.5; 
-}
+        .header p {
+            color: #FFFFFF; 
+            margin: 0;
+            font-size: 1.2em;
+            z-index: 4;
+        }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    gap: 1.5rem; 
-    padding: 1.5rem; 
-    margin: 0 auto; 
-    max-width: 75rem; 
-}
+        /* ============================
+           SECCIÓN INTRO (Referencia de Estilo)
+           ============================ */
 
-.card {
-    background-color: #FFFFFF;
-    border-radius: 0.75rem;
-    box-shadow: 0 0.4rem 0.6rem rgba(0,0,0,0.15);
-    padding: 1.5rem; 
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-align: center;
-}
+        .intro-container {
+            margin-top: 2rem; 
+            position: relative;
+            z-index: 2;
+        }
 
-.card:hover {
-    transform: translateY(-0.3rem);
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
-}
+        /* El estilo "intro" se aplica ahora a cada "card" para replicar el efecto */
+        .intro {
+            text-align: center; 
+            padding: 2rem; 
+            margin-bottom: 1.5rem;
+            max-width: 50rem; 
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.card-icon {
-    background-color: #F2F3F5;
-    color: #00447A;
-    font-size: 2.5em;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1rem;
-}
+        /* El efecto hover de intro es distinto al de las cards de la grilla */
+        .intro:hover {
+            transform: scale(1.01); 
+            box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1); 
+            background-color: #FFFFFF;
+            cursor: pointer;
+        }
+        
+        .intro .title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            margin-bottom: 1rem; 
+            padding-bottom: 0.5rem; 
+            border-bottom: 3px solid #83B81A;
+            width: fit-content; 
+            margin: 0 auto 1rem auto; 
+        }
+        
+        .intro h2 {
+            color: #83B81A;
+            font-size: 1.8em;
+            margin: 0;
+        }
+        
+        .intro p {
+            text-align: center; 
+            line-height: 1.5; 
+        }
+        
+        /* ============================
+           ESTILOS DE LA GRILLA REDISEÑADA Y EFECTO FOCUS
+           ============================ */
 
-.card h3 {
-    color: #00447A;
-    font-size: 1.3em; 
-    margin-top: 0;
-    margin-bottom: 0.75rem;
-}
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 1.5rem; 
+            padding: 1.5rem; 
+            margin: 0 auto; 
+            max-width: 75rem; 
+            /* Se establece la grilla como un contexto para el efecto de opacidad */
+        }
 
-.card p {
-    font-size: 0.95em; 
-    line-height: 1.4;
-    margin-bottom: 1rem;
-    text-align: left;
-    color: inherit; 
-}
+        /* EFECTO DE DIMMING/BLUR */
+        /* Al pasar el mouse sobre la grilla, todas las tarjetas se oscurecen/bajan opacidad */
+        .grid:hover .card {
+            opacity: 0.5;
+            /* Opcional: usar filter: blur(2px) si se desea, pero la opacidad es más suave */
+        }
 
-.steps {
-    list-style-type: none;
-    padding-left: 0;
-    text-align: left;
-}
+        /* Al pasar el mouse sobre una tarjeta específica, esta recupera la opacidad/zoom */
+        .grid:hover .card:hover {
+            opacity: 1;
+            transform: scale(1.01); /* Mantiene el efecto de zoom en el hover */
+            box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.15); 
+            z-index: 10; /* Asegura que la tarjeta enfocada esté por encima */
+        }
+        
+        /* En dispositivos pequeños, vuelve a una columna */
+        @media (max-width: 50rem) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            /* Deshabilitar el efecto de dimming en móvil para mejor usabilidad */
+            .grid:hover .card {
+                opacity: 1;
+            }
+        }
 
-.steps li {
-    background-color: #F2F3F5;
-    padding: 0.75rem; 
-    border-radius: 0.5rem;
-    margin-bottom: 0.5rem; 
-    color: inherit;
-}
 
-/* ================= FOOTER / CONTACTO ================= */
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 0.75rem; 
+            box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.08); /* Sombra más sutil por defecto */
+            padding: 2rem; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* Transición de opacidad añadida */
+            text-align: center; 
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            cursor: pointer;
+        }
+        
+        /* Título del evento (Incendios, Sismos, etc.) */
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #83B81A; /* Borde verde fuerte */
+            padding-bottom: 0.5rem;
+            width: fit-content;
+            margin: 0 auto 1.5rem auto; 
+        }
 
-.color-band {
-    width: 100%;
-    height: 0.625rem;
-}
+        .card-icon {
+            color: #00447A; 
+            font-size: 1.5em;
+            margin-right: 0.5rem;
+        }
 
-.green-band {
-    background-color: #83B81A; 
-}
+        .card h3 {
+            color: #00447A;
+            font-size: 1.5em; 
+            margin: 0;
+            line-height: 1.2;
+        }
 
-.contact-section {
-    background-color: #FFFFFF; 
-    padding: 2.5rem 1.5rem;
-}
+        .card > p {
+            /* Estilo para la línea de identificación */
+            font-size: 0.95em; 
+            line-height: 1.4;
+            margin-bottom: 1.5rem;
+            color: #555;
+            font-style: italic;
+            text-align: center;
+        }
+        
+        /* Estilos de la lista de pasos */
+        .steps {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 1rem;
+            text-align: left; 
+        }
 
-.contact-content {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 75rem; 
-    margin: 0 auto;
-}
+        .steps li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.25rem; 
+        }
 
-.contact-logo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.25rem;
-    min-width: 9rem;
-}
+        .step-number {
+            font-size: 2.2em; 
+            font-weight: bold;
+            color: #83B81A; 
+            line-height: 1;
+            margin-right: 0.75rem;
+            flex-shrink: 0; 
+            padding-top: 0.2rem;
+            text-align: right;
+            min-width: 2rem; 
+        }
+        
+        .step-text {
+            color: #333;
+            font-size: 0.9em; 
+            line-height: 1.4;
+        }
 
-.contact-logo .logo-img {
-    width: auto;
-    height: auto;
-    border-radius: 0;
-    background-color: transparent;
-    color: initial;
-    font-size: initial;
-    display: block; 
-    margin-right: 0; 
-    padding-right: 1rem;
-    border-right: 0.2rem solid #83B81A;
-}
 
-.contact-logo .logo-img img {
-    height: 4.5rem; 
-    width: auto;
-    display: block;
-}
+        /* ================= FOOTER / CONTACTO ================= */
+        
+        .color-band {
+            width: 100%;
+            height: 0.625rem; 
+        }
+        
+        .green-band {
+            background-color: #83B81A; 
+        }
 
-.contact-info {
-    flex-grow: 1; 
-    min-width: 18rem;
-    padding-left: 2.5rem;
-}
+        .contact-section {
+            background-color: #FFFFFF; 
+            padding: 2.5rem 1.5rem; 
+        }
 
-.contact-info p {
-    margin: 0.3rem 0;
-    font-size: 0.95em;
-}
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 75rem; 
+            margin: 0 auto;
+        }
 
-.contact-info strong {
-    color: #83B81A; 
-    font-weight: 600;
-}
+        .contact-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.25rem;
+            min-width: 9rem;
+        }
 
-.contact-social {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
+        .contact-logo .logo-img {
+            width: auto;
+            height: auto;
+            border-radius: 0;
+            background-color: transparent;
+            color: initial;
+            font-size: initial;
+            display: block; 
+            margin-right: 0; 
+            padding-right: 1rem; 
+            border-right: 0.2rem solid #83B81A; 
+        }
+        
+        .contact-logo .logo-img img {
+            height: 4.5rem; 
+            width: auto;
+            display: block;
+        }
 
-.contact-social a {
-    color: #00447A;
-    font-size: 1.5em;
-    margin-right: 1rem;
-    transition: color 0.2s ease;
-}
+        .contact-info {
+            flex-grow: 1; 
+            min-width: 18rem;
+            padding-left: 2.5rem; 
+        }
 
-.contact-social a:hover {
-    color: #83B81A; 
-}
+        .contact-info p {
+            margin: 0.3rem 0;
+            font-size: 0.95em;
+        }
 
-.contact-divider {
-    border-bottom: 1px solid #00447A;
-    margin-bottom: 1.25rem;
-}
+        .contact-info strong {
+            color: #83B81A; 
+            font-weight: 600;
+        }
 
-.footer-bottom {
-    background-color: #00447A;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 1rem; 
-    font-size: 0.8em;
-    margin-top: 0; 
-}
+        .contact-social {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
 
-/* Media Queries para Responsividad del Contacto */
-@media (max-width: 50rem) {
-    .contact-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .contact-logo {
-        border-bottom: 0.2rem solid #83B81A; 
-        padding-bottom: 1.25rem;
-        margin-bottom: 1.8rem;
-        justify-content: center; 
-        display: block; 
-        text-align: center;
-    }
-    .contact-logo .logo-img {
-        border-right: none;
-        padding-right: 0;
-        margin: 0 auto; 
-    }
-    .contact-info {
-        padding-left: 0;
-        text-align: center;
-    }
-    .contact-social {
-        justify-content: center;
-        margin-bottom: 1.25rem;
-    }
-}
+        .contact-social a {
+            color: #00447A;
+            font-size: 1.5em;
+            margin-right: 1rem;
+            transition: color 0.2s ease;
+        }
 
-/* ================= BOTÓN VOLVER ARRIBA ================= */
+        .contact-social a:hover {
+            color: #83B81A; 
+        }
 
-.back-to-top {
-    /* Fija la posición en la esquina inferior derecha */
-    position: fixed; 
-    bottom: 1.5rem; 
-    right: 1.5rem;
-    
-    /* Apariencia */
-    background-color: #00447A; 
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 1.5rem; 
-    font-weight: bold;
-    line-height: 1;
-    text-align: center;
-    
-    /* Dimensiones */
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    /* Control de visibilidad/animación */
-    opacity: 0; /* Oculto por defecto */
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-    z-index: 1000;
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-}
+        .contact-divider {
+            border-bottom: 1px solid #00447A;
+            margin-bottom: 1.25rem;
+        }
 
-.back-to-top:hover {
-    background-color: #73BA00;
-}
+        .footer-bottom {
+            background-color: #00447A;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 1rem; 
+            font-size: 0.8em;
+            margin-top: 0; 
+        }
 
-/* Esta clase se añade/quita con JavaScript para mostrar el botón */
-.back-to-top.show {
-    opacity: 1;
-    visibility: visible;
-}
+
+        
+        /* Media Queries para Responsividad del Contacto */
+        @media (max-width: 50rem) { 
+            .contact-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .contact-logo {
+                border-bottom: 0.2rem solid #83B81A; 
+                padding-bottom: 1.25rem;
+                margin-bottom: 1.8rem;
+                justify-content: center; 
+                display: block; 
+                text-align: center;
+            }
+            .contact-logo .logo-img {
+                border-right: none;
+                padding-right: 0;
+                margin: 0 auto; 
+            }
+            .contact-info {
+                padding-left: 0;
+                text-align: center;
+            }
+            .contact-social {
+                justify-content: center;
+                margin-bottom: 1.25rem;
+            }
+        }
